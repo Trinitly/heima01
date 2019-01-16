@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <!-- 版心 -->
+  <div class="w">
+    <div class="slide">
+      <!-- 左侧 -->
+      <div class="left">
+        <ul>
+          <li><a href="#">主菜单项目1</a></li>
+          <li><a href="#">主菜单项目2</a></li>
+          <li><a href="#">主菜单项目3</a></li>
+          <li><a href="#">主菜单项目4</a></li>
+          <li><a href="#">主菜单项目5</a></li>
+          <li><a href="#">主菜单项目6</a></li>
+          <li><a href="#">主菜单项目7</a></li>
+          <li><a href="#">主菜单项目8</a></li>
+          <li><a href="#">主菜单项目9</a></li>
+          <li><a href="#">主菜单项目10</a></li>
+          <li><a href="#">主菜单项目11</a></li>
+          <li><a href="#">主菜单项目12</a></li>
+          <li><a href="#">主菜单项目13</a></li>
+          <li><a href="#">主菜单项目14</a></li>
+          <li><a href="#">主菜单项目15</a></li>
+          <li><a href="#">主菜单项目16</a></li>
+        </ul>
+      </div>
+      <!-- 右侧 -->
+      <div class="right">
+        <div class="item">
+          <img src="images/01.png"></div>
+        <div class="item">
+          <img src="images/02.png"></div>
+        <div class="item">
+          <img src="images/03.png"></div>
+        <div class="item">
+          <img src="images/04.png"></div>
+        <div class="item">
+          <img src="images/05.png"></div>
+        <div class="item">
+          <img src="images/06.png"></div>
+        <div class="item">
+          <img src="images/07.png"></div>
+        <div class="item">
+          <img src="images/08.png"></div>
+        <div class="item">
+          <img src="images/09.png"></div>
+        <div class="item">
+          <img src="images/10.png"></div>
+        <div class="item">
+          <img src="images/11.png"></div>
+        <div class="item">
+          <img src="images/12.png"></div>
+        <div class="item">
+          <img src="images/13.png"></div>
+        <div class="item">
+          <img src="images/14.png"></div>
+        <div class="item">
+          <img src="images/15.png"></div>
+        <div class="item">
+          <img src="images/16.png"></div>
+      </div>
+
+    </div>
+  </div>
+  <script src="lib/jquery-1.12.4.js"></script>
+  <script>
+      //将left下的Li设为jquray对象，，添加鼠标移入事件
+      $('.left li').mouseenter(function () {
+        //将当前的li的下标赋值给num
+        var num = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        //把right里div设为jQuery对象，鼠标指向哪个li，对应的div出现，其他的兄弟节点隐藏
+        $('.right .item').eq(num).css('display','block').siblings().css('display','none');
+      });
+      //鼠标离开事件，鼠标离开时隐藏
+      $('.slide').mouseleave(function () {
+        $('.right .item').css('display','none');
+      });
+  
+  </script>
+</body>
+
+</html>
